@@ -19,15 +19,6 @@ public class CurrencyController {
     public String paginapost() {
         return "Coinvert";
     }
-
-    
- @GetMapping("/")
-    public String redirectToCoinvert() {
-        return "redirect:/Coinvert";
-    }
-
-
-
     
     @PostMapping
     public String obterCotacao(@RequestParam String origem, @RequestParam String destino, @RequestParam double valor, Model model) {
