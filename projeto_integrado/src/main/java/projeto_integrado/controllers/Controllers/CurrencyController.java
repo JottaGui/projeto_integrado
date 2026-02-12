@@ -20,6 +20,15 @@ public class CurrencyController {
         return "Coinvert";
     }
 
+    
+ @GetMapping("/")
+    public String redirectToCoinvert() {
+        return "redirect:/Coinvert";
+    }
+
+
+
+    
     @PostMapping
     public String obterCotacao(@RequestParam String origem, @RequestParam String destino, @RequestParam double valor, Model model) {
         String valorco = this.api.obterCotacao(origem, destino);
@@ -87,4 +96,5 @@ public class CurrencyController {
         return "logado :: simulacaor";
     }
 }
+
 
